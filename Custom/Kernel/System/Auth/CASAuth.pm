@@ -142,7 +142,6 @@ sub Auth {
 
         # Valideer het ST
         my $UserID = $CASobject->validateST( $ThisURL, $GivenServiceTicket );
-        # my $UserID = 'caozm';
         # if debug; CASobject returned $UserID
         $Kernel::OM->Get('Kernel::System::Log')->Log(Priority => 'error',Message  => "Debug: CASobject UserID: ". $UserID ) if ( $Self->{Debug} );
         # Als de ST een user opleverde is de gebruiker ingelogged
